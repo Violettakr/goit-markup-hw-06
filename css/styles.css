@@ -593,7 +593,7 @@ button {
 }
 
 .footer-left {
-  max-width: 768px;
+  max-width: 767px;
   margin-bottom: 72px;
 }
 
@@ -642,7 +642,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  max-width: 768px;
+  max-width: 767px;
   margin-bottom: 72px;
 }
 
@@ -1003,6 +1003,7 @@ button {
   .address-list {
     display: flex;
     gap: 40px;
+    flex-direction: column;
     text-decoration: none;
   }
 
@@ -1115,6 +1116,7 @@ button {
   }
 
   .address-list {
+    display: flex;
     flex-direction: row;
     gap: 40px;
   }
