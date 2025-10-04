@@ -101,11 +101,7 @@ button {
 }
 
 .nav-list {
-  display: flex;
-  gap: 40px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  display: none;
 }
 
 .nav-link {
@@ -147,9 +143,7 @@ button {
 }
 
 .address-list {
-  display: flex;
-  gap: 40px;
-  text-decoration: none;
+  display: none;
 }
 
 .address-link {
@@ -176,7 +170,7 @@ button {
   background: var(--white);
   padding-top: 24px;
   flex-direction: column;
-  display: flex;
+  display: none;
   padding: 24px 16px 40px;
 }
 
@@ -231,7 +225,7 @@ button {
 .hero {
   background-color: #2e2f42;
   text-align: center;
-  padding: 188px 0;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -261,10 +255,10 @@ button {
 
 .hero-title {
   color: #ffffff;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  max-width: 496px;
+  max-width: 216px;
   margin: 0 auto;
   font-weight: 700;
 }
@@ -295,7 +289,7 @@ button {
 .features {
   font-family: "Roboto", sans-serif;
   /* padding: 120px 0; */
-  padding-top: 48px;
+  padding-top: 96px;
   padding-bottom: 96px;
   gap: 72px;
 }
@@ -314,7 +308,6 @@ button {
 .features-item {
   /*    flex-basis: calc((100% - 72px) / 3);
   border-radius: 0 0 4px 4px; */
-  padding: 0 16px;
 
   width: 100%;
 }
@@ -376,7 +369,6 @@ button {
   letter-spacing: 0.02em;
 
   font-weight: 500;
-  padding-bottom: 72px;
 }
 
 .team {
@@ -397,8 +389,7 @@ button {
   /* text-transform: capitalize; */
   color: #2e2f42;
   border-radius: 0 0 4px 4px;
-  padding-top: 96px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .container-team {
@@ -592,15 +583,18 @@ button {
   background-color: #2e2f42;
   /*   padding-top: 100px;
   padding-bottom: 100px; */
-  /*   padding-top: 96px;
-  padding-bottom: 96px; */
-  padding: 96px 16px;
+  padding: 96px 0;
 }
 
 .footer-inner {
   /*   display: flex;
   align-items: flex-start; */
   gap: 120px;
+}
+
+.footer-left {
+  max-width: 768px;
+  margin-bottom: 72px;
 }
 
 .footer-logo {
@@ -627,7 +621,6 @@ button {
   color: #ffffff;
   letter-spacing: 0.02em;
   /* max-width: 264px; */
-  padding-bottom: 72px;
   font-weight: 400;
   font-size: 16px;
 
@@ -649,6 +642,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 768px;
+  margin-bottom: 72px;
 }
 
 .footer-subscribe {
@@ -664,7 +659,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--white);
-  margin-top: 72px;
   margin-bottom: 16px;
   text-align: center;
 }
@@ -848,8 +842,6 @@ button {
   text-align: center;
   color: #2e2f42;
   font-family: "Roboto", sans-serif;
-  /*   margin-top: 23.61px;
-  margin-bottom: 16px; */
 }
 
 .modal-title {
@@ -999,8 +991,21 @@ button {
 @media screen and (min-width: 768px) {
   .container,
   .container-narrow {
-    width: 768px;
+    max-width: 768px;
   }
+  .nav-list {
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .address-list {
+    display: flex;
+    gap: 40px;
+    text-decoration: none;
+  }
+
   .hero {
     padding-top: 112px;
     padding-bottom: 112px;
@@ -1023,15 +1028,16 @@ button {
   .container-hero {
     gap: 36px;
   }
-
+  .hero-title {
+    font-size: 56px;
+    max-width: 496px;
+  }
   .features {
     padding-top: 96px;
-    padding-bottom: 72px;
+    padding-bottom: 96px;
   }
   .features-list {
-    gap: 24px;
-    padding-right: 16px;
-    padding-left: 16px;
+    gap: 72px 24px;
   }
 
   .features-item {
@@ -1042,22 +1048,19 @@ button {
     text-align: left;
   }
   .team {
-    padding-bottom: 96px;
+    padding-bottom: 96px 0;
   }
 
-  /*   .team > .container {
-    width: 736px;
-  } */
+  .team > .container {
+    max-width: 584px;
+  }
 
   .team-item {
-    width: calc((100% - 64px) / 2);
-    margin: 0;
-    width: 100%;
-    height: auto;
+    width: calc((100% - 24px) / 2);
   }
 
   .team-list {
-    gap: 64px 24px;
+    gap: 72px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -1074,20 +1077,22 @@ button {
   .footer-inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
+    max-width: 584px;
   }
   .footer-logo {
-    margin-left: 108px;
     text-align: left;
   }
 
   .footer-text {
-    margin-left: 108px;
+    max-width: 264px;
+  }
+  footer-social {
+    text-align: left;
   }
   .footer-subscribe {
     text-align: left;
     align-items: flex-start;
-    margin-left: 108px;
   }
 
   .footer-subscribe-title {
@@ -1103,11 +1108,20 @@ button {
 
 @media screen and (min-width: 1158px) {
   .container {
-    width: 1158px;
+    max-width: 1158px;
     /*      padding-left: 15px;
     padding-right: 15px; */
     /*   margin: 0 auto; */
   }
+
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .modal-close-header {
+    display: none;
+  }
+
   .hero {
     padding-top: 188px;
     padding-bottom: 188px;
@@ -1134,10 +1148,6 @@ button {
   .features {
     padding: 120px 0;
   }
-  /* 
-  .container-narrow {
-    width: 1158px;
-  } */
 
   .features-list {
     gap: 24px;
@@ -1177,16 +1187,16 @@ button {
     justify-content: center;
     padding: 120px 0;
   }
-  /* .team > .container {
+  .team > .container {
     width: 1158px;
-  } */
+  }
 
   .team-list {
     gap: 24px;
   }
 
   .team-item {
-    width: calc((100% -72px) / 4);
+    width: calc((100% - 72px) / 4);
   }
 
   .portfolio {
@@ -1207,6 +1217,7 @@ button {
     display: flex;
     align-items: flex-start;
     gap: 120px;
+    justify-content: space-between;
   }
 
   .footer-logo {
@@ -1241,9 +1252,8 @@ button {
     margin: 0;
   }
 
-  .footer-input {
-    width: 264px;
-  }
+  /*   .footer-input {
+  } */
 
   .footer-form-btn {
     gap: 24;
