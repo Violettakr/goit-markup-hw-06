@@ -160,6 +160,11 @@ button {
   color: #404bbf;
 }
 
+.menu-open-btn {
+  border: none;
+  background-color: transparent;
+}
+
 .mob-menu {
   height: 100%;
   width: 100%;
@@ -170,7 +175,7 @@ button {
   background: var(--white);
   padding-top: 24px;
   flex-direction: column;
-  display: flex;
+  display: none;
   padding: 24px 16px 40px;
 }
 
@@ -178,19 +183,13 @@ button {
   display: block;
   margin-left: auto;
   margin-bottom: 24px;
-  border-radius: 50%;
+  border-radius: 100%;
   width: 24px;
   height: 24px;
-}
-mob-modal-button {
-  fill: var(--navy-blue);
+  border-color: var(--cornflower);
   stroke-width: 1px;
-  stroke: #000;
-  border-radius: 100%;
-  fill: var(--cornflower);
-  stroke-width: 1px;
-  stroke: var(--navy-blue);
 }
+
 .mob-item:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -202,18 +201,13 @@ mob-modal-button {
   letter-spacing: 0.02em;
   color: var(--navy-blue);
 }
-
+.mob-link-color {
+  color: var(--ocean);
+}
 .mob-list {
   margin-bottom: 50px;
 }
-.mob-address {
-  /*  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: var(--slate);
-  margin-bottom: 48px; */
-}
+
 .mob-menu-bottom {
   display: grid;
   margin-top: auto;
@@ -226,6 +220,7 @@ mob-modal-button {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--slate);
+  gap: 24px;
 }
 .mob-socials {
   display: flex;
@@ -317,15 +312,11 @@ mob-modal-button {
   gap: 72px;
 }
 
-.container-narrow {
-  /*  width: 1158px; */
-  width: 320px;
-}
 .features-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 72px;
 }
 
 .features-item {
@@ -401,7 +392,7 @@ mob-modal-button {
 }
 
 .team > .container {
-  width: 288px;
+  max-width: 288px;
 }
 .our-team {
   font-weight: 700;
@@ -457,10 +448,7 @@ mob-modal-button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 428px;
   margin: 72px;
-  width: 100%;
-  max-width: 264px;
 }
 
 .team-item:hover {
@@ -1012,8 +1000,7 @@ mob-modal-button {
 }
 
 @media screen and (min-width: 768px) {
-  .container,
-  .container-narrow {
+  .container {
     max-width: 768px;
   }
   .nav-list {
@@ -1025,9 +1012,17 @@ mob-modal-button {
   }
   .address-list {
     display: flex;
-    gap: 40px;
+    gap: 12px;
     flex-direction: column;
     text-decoration: none;
+  }
+
+  .menu-open-btn {
+    display: none;
+  }
+
+  .mob-menu {
+    display: none;
   }
 
   .hero {
@@ -1072,7 +1067,7 @@ mob-modal-button {
     text-align: left;
   }
   .team {
-    padding-bottom: 96px 0;
+    padding: 96px 0;
   }
 
   .team > .container {
@@ -1081,10 +1076,11 @@ mob-modal-button {
 
   .team-item {
     width: calc((100% - 24px) / 2);
+    margin: 0;
   }
 
   .team-list {
-    gap: 72px;
+    gap: 64px 24px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
@@ -1097,7 +1093,9 @@ mob-modal-button {
   .portfolio-list {
     gap: 24px;
   }
-
+  .footer-left {
+    margin-bottom: unset;
+  }
   .footer-inner {
     display: flex;
     flex-wrap: wrap;
@@ -1111,6 +1109,11 @@ mob-modal-button {
   .footer-text {
     max-width: 264px;
   }
+
+  .footer-social-wrap {
+    margin-bottom: unset;
+  }
+
   footer-social {
     text-align: left;
   }
@@ -1142,6 +1145,13 @@ mob-modal-button {
     display: flex;
     flex-direction: row;
     gap: 40px;
+  }
+  .menu-open-btn {
+    display: none;
+  }
+
+  .mob-menu {
+    display: none;
   }
 
   .hero {
@@ -1210,7 +1220,7 @@ mob-modal-button {
     padding: 120px 0;
   }
   .team > .container {
-    width: 1158px;
+    max-width: 1158px;
   }
 
   .team-list {
@@ -1238,7 +1248,7 @@ mob-modal-button {
   .footer-inner {
     display: flex;
     align-items: flex-start;
-    gap: 120px;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
 
@@ -1274,17 +1284,13 @@ mob-modal-button {
     margin: 0;
   }
 
-  /*   .footer-input {
-  } */
+  .footer-input {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
 
   .footer-form-btn {
     gap: 24;
     margin: top 130px;
-  }
-
-  .footer-inner {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: nowrap;
   }
 }
