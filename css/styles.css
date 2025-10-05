@@ -180,13 +180,15 @@ button {
 }
 
 .modal-close-header {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-bottom: 24px;
   border-radius: 100%;
   width: 24px;
   height: 24px;
-  border-color: var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   stroke-width: 1px;
 }
 
@@ -1118,7 +1120,7 @@ button {
     margin-bottom: unset;
   }
 
-  footer-social {
+  .footer-social {
     text-align: left;
   }
 
@@ -1266,6 +1268,7 @@ button {
   .footer-social {
     text-align: left;
   }
+
   .footer-subscribe {
     gap: 16px;
     margin: 0;
