@@ -170,7 +170,7 @@ button {
   background: var(--white);
   padding-top: 24px;
   flex-direction: column;
-  display: none;
+  display: flex;
   padding: 24px 16px 40px;
 }
 
@@ -178,8 +178,19 @@ button {
   display: block;
   margin-left: auto;
   margin-bottom: 24px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
 }
-
+mob-modal-button {
+  fill: var(--navy-blue);
+  stroke-width: 1px;
+  stroke: #000;
+  border-radius: 100%;
+  fill: var(--cornflower);
+  stroke-width: 1px;
+  stroke: var(--navy-blue);
+}
 .mob-item:not(:last-child) {
   margin-bottom: 40px;
 }
@@ -196,14 +207,26 @@ button {
   margin-bottom: 50px;
 }
 .mob-address {
+  /*  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  margin-bottom: 48px; */
+}
+.mob-menu-bottom {
+  display: grid;
+  margin-top: auto;
+  gap: 24px;
+}
+
+.mob-address-link {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--slate);
-  margin-bottom: 48px;
 }
-
 .mob-socials {
   display: flex;
   gap: 40px;
@@ -1119,9 +1142,6 @@ button {
     display: flex;
     flex-direction: row;
     gap: 40px;
-  }
-  .modal-close-header {
-    display: none;
   }
 
   .hero {
