@@ -175,7 +175,7 @@ button {
   background: var(--white);
   padding-top: 24px;
   flex-direction: column;
-  display: flex;
+  display: none;
   padding: 24px 16px 40px;
 }
 
@@ -395,6 +395,7 @@ button {
   background-color: #f4f4fd;
   /*  padding: 120px 0; */
   /*   margin: 0 auto; */
+  padding: 96px 28px;
 }
 
 .team > .container {
@@ -454,7 +455,6 @@ button {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 72px;
 }
 
 .team-item:hover {
@@ -1022,7 +1022,9 @@ button {
     flex-direction: column;
     text-decoration: none;
   }
-
+  .address-link {
+    font-size: 12px;
+  }
   .menu-open-btn {
     display: none;
   }
@@ -1097,7 +1099,7 @@ button {
     padding-bottom: 96px;
   }
   .portfolio-list {
-    gap: 24px;
+    gap: 72px 24px;
   }
   .footer-left {
     margin-bottom: unset;
