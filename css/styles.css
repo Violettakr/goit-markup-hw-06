@@ -175,7 +175,7 @@ button {
   background: var(--white);
   padding-top: 24px;
   flex-direction: column;
-  display: none;
+  display: flex;
   padding: 24px 16px 40px;
 }
 
@@ -201,9 +201,7 @@ button {
   letter-spacing: 0.02em;
   color: var(--navy-blue);
 }
-.mob-link-color {
-  color: var(--ocean);
-}
+
 .mob-list {
   margin-bottom: 50px;
 }
@@ -213,19 +211,25 @@ button {
   margin-top: auto;
   gap: 24px;
 }
-
+.mob-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .mob-address-link {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--slate);
-  gap: 24px;
 }
 .mob-socials {
   display: flex;
   gap: 40px;
   margin: 0;
+}
+.mob-link-color {
+  color: var(--ocean);
 }
 
 .mob-socials-list {
@@ -432,7 +436,7 @@ button {
 .team-list {
   display: flex;
   justify-content: center;
-  /* gap: 24px; */
+  gap: 72px;
   flex-wrap: wrap;
 }
 
@@ -1117,6 +1121,7 @@ button {
   footer-social {
     text-align: left;
   }
+
   .footer-subscribe {
     text-align: left;
     align-items: flex-start;
